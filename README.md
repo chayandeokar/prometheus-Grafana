@@ -1,4 +1,6 @@
-# by default grafana username and  password is admin 
+# By default grafana username and  password is admin 
+
+# Intergation of Grafana with Prometheus it can be done by Adding Data source 
 
 # https://devops4solutions.com/monitoring-using-prometheus-and-grafana-on-aws-ec2/
 
