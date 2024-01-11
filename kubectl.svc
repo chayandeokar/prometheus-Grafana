@@ -1,0 +1,9 @@
+Kubectl Commands to get svc
+
+
+## kubectl get svc -n kafka-new
+
+
+
+
+
