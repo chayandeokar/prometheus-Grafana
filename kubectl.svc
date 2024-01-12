@@ -3,6 +3,8 @@ Kubectl Commands to get svc
 
 ## kubectl get svc -n kafka-new
 
+## kubectl edit cm prometheus-alertmanager
+
 
 
 
