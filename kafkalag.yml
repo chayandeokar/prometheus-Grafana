@@ -1,0 +1,9 @@
+ groups:
+      - name: kafka_consumer_lag_alerts
+        rules:
+          - alert: KafkaConsumerGroupLagTooHigh
+            expr: kafka_consumergroup_lag{group="your_consumer_group"} > 100
+            for: 5m
+            annotations:
+              summary: "Kafka Consumer Group Lag Too High"
+              description: "The Kafka consumer group lag for group 'your_consumer_group' is too high."
