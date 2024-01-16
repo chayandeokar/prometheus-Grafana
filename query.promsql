@@ -1,33 +1,20 @@
 To create a Grafana dashboard that monitors your Kubernetes cluster, you can use Prometheus as a data source and construct queries based on the metrics collected by Prometheus. Below are some example queries that you can use to monitor various aspects of your Kubernetes cluster:
 
-Kubernetes Nodes Status:
 Query: up{job="kubernetes-nodes"}
-Description: This query will return 1 if the nodes are up and 0 if any node is down.
 
-Kubernetes Pods Status:
 Query: up{job="kubernetes-pods"}
-Description: This query will return 1 if all pods are up and 0 if any pod is down.
 
-Kubernetes Nodes CPU Usage:
 Query: node_cpu{mode="idle", job="kubernetes-nodes-cadvisor"}
-Description: This query will show the idle CPU usage on each node.
 
-Kubernetes Nodes Memory Usage:
 Query: node_memory_bytes{job="kubernetes-nodes-cadvisor"}
-Description: This query will show the total memory usage on each node.
 
-Kubernetes Pods Restart Count:
 Query: kube_pod_container_status_restarts_total{job="kubernetes-nodes-cadvisor"}
-Description: This query will display the total restart count for each pod.
 
-Kubernetes API Server Requests:
 Query: kube_apiserver_request_total
-Description: This query will show the total API server requests.
 
-Prometheus Up Status:
-Query: up{job="prometheus"}
-Description: This query will return 1 if Prometheus is up.
+Query : 
+-- process_cpu_seconds_total{instance="aks-agentpool-11372677-vmss0000zr"}
 
-Prometheus Pushgateway Up Status:
-Query: up{job="prometheus-pushgateway"}
-Description: This query will return 1 if the Prometheus Pushgateway is up.
+-- 100 - (avg by (instance) (irate(process_cpu_seconds_total{instance="aks-agentpool-11372677-vmss0000zr"}[5m])) * 100)
+
+-- up{job="kubernetes-nodes", instance="aks-agentpool-11372677-vmss0000zt"}
