@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dcgm-exporter-service
+  namespace: dcgm
+spec:
+  selector:
+    app: dcgm-exporter
+  ports:
+    - protocol: TCP
+      port: 9400
+      targetPort: 9400
+  type: ClusterIP
