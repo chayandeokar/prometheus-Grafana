@@ -1,0 +1,13 @@
+   spec:
+      containers:
+      - args:
+        - --verbosity=0
+        - --kafka.server=10.100.118.208:9092  ### put your ip here it get connect
+        image: danielqsj/kafka-exporter:v1.7.0
+        imagePullPolicy: IfNotPresent
+        name: prometheus-kafka-exporter
+        ports:
+        - containerPort: 9308
+          name: exporter-port
+          protocol: TCP
+        resources: {}
