@@ -1,0 +1,1 @@
+We need to always add bootstrap ip in kafka exporter file so that it can connect with our kafka
