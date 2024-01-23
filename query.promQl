@@ -18,3 +18,8 @@ Query :
 -- 100 - (avg by (instance) (irate(process_cpu_seconds_total{instance="aks-agentpool-11372677-vmss0000zr"}[5m])) * 100)
 
 -- up{job="kubernetes-nodes", instance="aks-agentpool-11372677-vmss0000zt"}
+
+
+
+CPU utlization query : of each nodes
+-->  avg by(instance) (irate(node_cpu_seconds_total{instance="172.31.95.94:9100", mode="idle"}[5m])) * 100
