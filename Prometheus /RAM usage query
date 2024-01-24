@@ -1,0 +1,4 @@
+100 * ( 1 - (node_memory_MemFree_bytes{instance="172.31.90.36:9100"} / node_memory_MemTotal_bytes{instance="172.31.90.36:9100"}))
+
+it gives us fully percenatge graph 
+just change ip address the neverything will will work
