@@ -1,0 +1,2 @@
+create pvc there where your deployment running
+means under same namespaces
