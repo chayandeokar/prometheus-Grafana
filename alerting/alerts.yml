@@ -1,0 +1,25 @@
+rt# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+data:
+  alertmanager.yml: "global:\n  resolve_timeout: 1m\n\nroute:\n  receiver: 'slack-notifications'\n\nreceivers:\n-
+    name: 'slack-notifications'\n  slack_configs:\n  - api_url: 'https://hooks.slack.com/services/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'\n
+    \   channel: '#lag_alert'\n    send_resolved: true\n \n"
+kind: ConfigMap
+metadata:
+  annotations:
+    meta.helm.sh/release-name: prometheus
+    meta.helm.sh/release-namespace: monitor-prom
+  creationTimestamp: "2024-01-29T06:41:44Z"
+  labels:
+    app.kubernetes.io/instance: prometheus
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: alertmanager
+    app.kubernetes.io/version: v0.26.0
+    helm.sh/chart: alertmanager-1.7.0
+  name: prometheus-alertmanager
+  namespace: monitor-prom
+  resourceVersion: "62237186"
+  uid: cc8d61ff-ac13-4c29-928e-e7085495b438
