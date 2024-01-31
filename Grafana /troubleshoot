@@ -1,0 +1,4 @@
+Error: INSTALLATION FAILED: Unable to continue with install: ClusterRoleBinding "grafana-clusterrolebinding" in namespace "" exists and cannot be imported into the current release: invalid ownership metadata; annotation validation error: key "meta.helm.sh/release-namespace" must equal "default": current value is "monitor-prom"
+Error from server (NotFound): services "grafana" not found
+
+---> kubectl delete clusterrolebinding grafana-clusterrolebinding
