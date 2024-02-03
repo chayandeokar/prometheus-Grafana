@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# alert file
+
 # Define the new scrape configuration
 NEW_SCRAPE_CONFIG=$(cat <<EOF
   - job_name: 'dcgm-exporter'
