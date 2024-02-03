@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# alert file
+# adding configuration to Prometheus 
 
 # Define the new scrape configuration
 NEW_SCRAPE_CONFIG=$(cat <<EOF
