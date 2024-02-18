@@ -4,5 +4,7 @@ Step 3: Start Grafana Server
 Step 4 : Put Public IP and access by port 3000
 URL -- [IP:3000]
 
+generally work on port 80
+
 wget https://dl.grafana.com/enterprise/release/grafana-enterprise-10.2.3.linux-amd64.tar.gz
 tar -zxvf grafana-enterprise-10.2.3.linux-amd64.tar.gz
