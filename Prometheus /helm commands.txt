@@ -1,0 +1,7 @@
+  514  helm get values my-prometheus -n monitoring > value.yaml
+  515  notepad value.yaml
+  516  helm upgrade my-prometheus prometheus-community/prometheus -f value.yaml  -n monitoring
+  517  kubectl get svc -n monitoring
+  518  kubectl edit svc my-prometheus-server -n monitoring
+  519  kubectl edit svc my-prometheus-alertmanager -n monitoring
+  520  kubectl get svc -n monitoring
