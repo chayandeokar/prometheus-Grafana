@@ -1,0 +1,3 @@
+alertmanager.yml: "global:\n  resolve_timeout: 1m\n\nroute:\n  receiver: 'slack-notifications'\n\nreceivers:\n-
+    name: 'slack-notifications'\n  slack_configs:\n  - api_url: 'https://hooks.slack.com/services/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'\n
+    \   channel: '#lag_alert'\n    send_resolved: true\n \n"
