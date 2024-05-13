@@ -1,0 +1,22 @@
+alerting_rules.yml: "groups:\n- name: kafka_consumer_lag_alerts\n  rules:\n  - alert:
+    KafkaConsumerGroupLagTooHigh_od_india_is_above_30\n    annotations:\n      description:
+    The Kafka consumer group lag for group 'od_india' is too high.Current lag is {{
+    $value }}.\n      summary: Kafka Consumer Group Lag Too High od india\n    expr:
+    kafka_consumergroup_lag_sum{topic=\"od_india\"} > 30\n    for: 1m\n\n  - alert:
+    KafkaConsumerGroupLagTooHigh_clf_prc_is_above_30\n    annotations:\n      description:
+    The Kafka consumer group lag for group 'clf_prc' is too high.Current lag is {{
+    $value }}.\n      summary: Kafka Consumer Group Lag Too High clf_prc\n    expr:
+    kafka_consumergroup_lag_sum{topic=\"clf_prc\"} > 30\n    for: 1m\n  \n  - alert:
+    KafkaConsumerGroupLagTooHigh_clf_prc_india_is_above_30\n    annotations:\n      description:
+    The Kafka consumer group lag for group 'clf_prc_india' is too high.Current lag
+    is {{ $value }}.\n      summary: Kafka Consumer Group Lag Too High clf_prc_india\n
+    \   expr: kafka_consumergroup_lag_sum{topic=\"clf_prc_india\"} > 30\n    for:
+    1m\n \n  - alert: KafkaConsumerGroupLagTooHigh_ques_is_above_30\n    annotations:\n
+    \     description: The Kafka consumer group lag for group 'ques' is too high.Current
+    lag is {{ $value }}.\n      summary: Kafka Consumer Group Lag Too High ques\n
+    \   expr: kafka_consumergroup_lag_sum{topic=\"ques\"} > 30\n    for: 1m\n\n  -
+    alert: KafkaConsumerGroupLagTooHigh_ques_thai_is_above_30\n    annotations:\n
+    \     description: The Kafka consumer group lag for group 'ques_thai' is too high.Current
+    lag is {{ $value }}.\n      summary: Kafka Consumer Group Lag Too High ques_thai\n
+    \   expr: kafka_consumergroup_lag_sum{topic=\"ques_thai\"} > 30\n    for: 1m\n
+    \ \n"
