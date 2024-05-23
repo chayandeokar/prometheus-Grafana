@@ -18,6 +18,7 @@ Both Prometheus and Grafana have a very good documentation
 
 - Kubernetes Cluster
 - Helm 
+- Kubectl perfection 
 
 If you don't have them installed. Follow the below links:
 
