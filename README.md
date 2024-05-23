@@ -16,7 +16,7 @@ Both Prometheus and Grafana have a very good documentation
 
 ## Pre-Requisite
 
-- Kubernetes Cluster (can be minikube)
+- Kubernetes Cluster
 - Helm 
 
 If you don't have them installed. Follow the below links:
